@@ -58,6 +58,20 @@ class PDFViewer(tk.Tk):
         self.start_time = time.time()
         self.file_name = None
         
+        # Logo Frame
+        self.logo_frame = tk.Frame(self.main_frame)
+        self.logo_frame.pack(side=tk.TOP, fill=tk.X)
+
+        # Load logo image
+        logo_path = "logo - round coners.png"  # Replace with your logo image path
+        self.logo_image = Image.open(logo_path)
+        self.logo_image = self.logo_image.resize((150, 150), Image.LANCZOS)  # Resize as needed
+        self.logo_photo = ImageTk.PhotoImage(self.logo_image)
+
+        # Add logo to the logo frame
+        self.logo_label = tk.Label(self.logo_frame, image=self.logo_photo)
+        self.logo_label.pack(side=tk.TOP, pady=10)
+        
         # Chat area
         self.chat_frame = tk.Frame(self.main_frame, width=300)
         self.chat_frame.pack(side=tk.RIGHT, fill=tk.Y)
