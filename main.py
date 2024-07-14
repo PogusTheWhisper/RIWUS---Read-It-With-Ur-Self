@@ -75,7 +75,7 @@ class PDFViewer(tk.Tk):
         self.send_button = tk.Button(self.entry_frame, text="Send", command=self.send_message)
         self.send_button.pack(side=tk.RIGHT, padx=10, pady=10)
         self.client = OpenAI(
-        api_key='sk-psIjnhS63MFqDJzmrCnY6iLPr3iZ6wAXP57La0dvUcNoE9dc',
+        api_key='<Typhoon token>',
         base_url="https://api.opentyphoon.ai/v1",
         )
         
